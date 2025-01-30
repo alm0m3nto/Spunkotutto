@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Spunkotutto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <META NAME="DC.Title" CONTENT="Spunkotutto"/>
+    <META NAME="DC.Creator" CONTENT="Alessio Ursini"/>
+    <META NAME="DC.Subject" CONTENT="Musica Punk in Italia"/>
+    <META NAME="DC.Description" CONTENT="Raccolta di diverse band Punk italiane, con l'obiettivo di far incuriosire e informare i meno avvezzi al genere affinchè possano conoscere le band che hanno fatto la storia del genere nel nostro paese."/>
+    <META NAME="DC.Publisher" CONTENT="Github pages"/>
+    <META NAME="DC.Date" CONTENT="02-01-2025"/>
+    <META NAME="DC.Type" CONTENT="Catalogo"/>
+    <META NAME="DC.Format" CONTENT="Sito Web"/>
+    <META NAME="DC.Language" CONTENT="Italiano"/>
+    <META NAME="DC.Rights" CONTENT="Diritti di proprietà dei rispettivi autori"/>
+    <style>
+    body {
+      background-color: black;
+    }
+
+    /*briciole di pane*/
+    ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+    /* Contenitore principale */
+    .container {
+      display: flex; /*Utilizza Flexbox */
+      justify-content: space-between; /* Spazio tra le colonne */
+      margin: 0;
+    }
+
+    /* Colonna sinistra */
+    .left-column {
+      width: 30%; /* Larghezza della colonna sinistra */
+      height: 70%;
+      background-color: white; /* Colore di sfondo della colonna */
+      border-radius: 0;
+      margin-top: 10px;
+      margin-left: 0;
+      padding: 10px;
+
+    }
+    .leftcolumn-title{
+      margin-top: 10px;
+      color: Black;
+      text-align: center;
+    }
+        li {
+          list-style-type: none; /* Rimuove i punti */
+        }
+        /* Stili di base */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters label {
+            margin-right: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    /* Colonna destra */
+    .right-column {
+      height: 100%;
+      width: 100%; /* Larghezza della colonna destra */
+      background-color: black; /* Colore di sfondo della colonna */
+      padding: 10px;
+    }
+    .item {
+        margin: 10px 0px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        height: 300px;
+        background-color: white;
+    }
+    .item-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 3 colonne per riga */
+        grid-gap: 20px; /* Spazio tra gli elementi della griglia */
+        flex: 1; /* Fai sì che la griglia occupi tutto lo spazio disponibile */
+        margin-top: 30px;
+    }
+    .item img {
+      width: 200px; /* Larghezza dell'immagine */
+      height: 200px; /* Altezza dell'immagine */
+      object-fit: cover;
+    }
+
+    .item p {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 20px;
+      color: black; /* Colore del testo */
+    }
+    .button {
+      margin: auto;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      /*padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 50px;
+      padding-right: 50px;*/
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4caf50;
+    }
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+      text-decoration: none; /* Disattiva la sottolineatura quando si passa sopra */
+      color: inherit; /* Mantiene il colore originale durante il hover */
+    }
+
+
+
+    /* Stile per la paginazione */
+    .pagination {
+      display: inline-block;
+      background-color: white; /* Sfondo bianco per la paginazione */
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px; /* Spinge la paginazione verso il fondo della pagina */
+      margin-bottom: 20px; /* Distanza tra la paginazione e il footer */
+      margin-left: 650px;
+    }
+
+    /* Stile per i singoli numeri di pagina */
+    .pagination a {
+      color: black; /* Testo nero per i numeri di pagina */
+      padding: 8px 16px;
+      text-decoration: none;
+      margin: 0 4px;
+      border: 1px solid #ddd; /* Bordo grigio chiaro */
+      border-radius: 4px; /* Angoli arrotondati */
+      transition: background-color 0.3s ease; /* Transizione dolce per il passaggio del mouse */
+    }
+
+    /* Stile per i numeri della pagina al passaggio del mouse */
+    .pagination a:hover {
+      background-color: #4CAF50; /* Sfondo verde al passaggio del mouse */
+      color: white; /* Colore del testo bianco quando si passa sopra */
+    }
+
+    /* Stile per il numero di pagina attivo (se presente) */
+    .pagination a.active {
+      background-color: #4CAF50; /* Verde per la pagina attiva */
+      color: white; /* Testo bianco per la pagina attiva */
+    }
+
+    /* Stile per la paginazione alle estremità (prima/ultima) */
+    .pagination a:first-child, .pagination a:last-child {
+      font-weight: bold; /* Rende "Precedente" e "Successivo" più evidenti */
+    }
+
+
+
+    footer {
+      background-color: white;
+      color: black;
+    }
+    ul {
+      list-style: none;
+    }
+    .col-links img{
+      width: 10%;
+      padding-bottom: 20px;
+    }
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <!--NAVBAR CON DROPDOWN-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="Logo/spunkotutto9.png" alt="Logo" style="height: 40px;">
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SOTTOGENERI</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="punkrock.html">Punk rock</a></li>
+                  <li><a class="dropdown-item" href="postpunk.html">Post-punk</a></li>
+                  <li><a class="dropdown-item" href="hardcorepunk.html">Hardcore punk</a></li>
+                  <li><a class="dropdown-item" href="skapunk.html">Ska punk</a></li>
+                  <li><a class="dropdown-item" href="poppunk.html">Pop punk</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Catalogo.html">CATALOGO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lineadeltempo.html">LINEA DEL TEMPO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="luoghi.html">LUOGHI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">ACCEDI</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Briciole di pane-->
+  <ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li style="color: black;">CATALOGO</li>
+  </ul>
+<div class="container">
+  <div class="left-column">
+    <h1>Filtra Articoli</h1>
+    <h3>Sottogenere</h3>
+     <!-- Filtro categorie -->
+     <div class="filters">
+         <li>
+           <label>
+               <input type="checkbox" value="punk" class="filter-category">Punk Rock
+           </label>
+         </li>
+         <li>
+           <label>
+               <input type="checkbox" value="hardcore" class="filter-category">Hardcore Punk
+           </label>
+         </li>
+         <li>
+           <label>
+               <input type="checkbox" value="ska" class="filter-category"> Ska Punk
+           </label>
+         </li>
+         <li>
+           <label>
+               <input type="checkbox" value="post" class="filter-category"> Post-Punk
+           </label>
+         </li>
+         <li>
+           <label>
+               <input type="checkbox" value="pop" class="filter-category"> Pop Punk
+           </label>
+         </li>
+     </div>
+
+     <h3>Oggetto ricercato</h3>
+      <div class="filters">
+       <li>
+         <label>
+             <input type="checkbox" value="Gruppo" class="filter-price"> Gruppo
+         </label>
+       </li>
+       <li>
+         <label>
+             <input type="checkbox" value="album" class="filter-price"> Album
+         </label>
+       </li>
+     </div>
+
+
+     <!-- Ordinamento -->
+     <div class="filters">
+         <h3>Ordinamento</h3>
+         <label for="sort">Ordina per:</label>
+         <select id="sort">
+             <option value="asc">Alfabetico (A-Z)</option>
+             <option value="desc">Alfabetico (Z-A)</option>
+         </select>
+     </div>
+
+     <!-- Ordine cronologico -->
+     <div class="filters">
+          <h3>Filtra per data</h3>
+          <label for="start-date">Data inizio:</label>
+          <input type="date" id="start-date">
+          <label for="end-date">Data fine:</label>
+          <input type="date" id="end-date">
+          <button id="filter-date">Applica filtro per data</button>
+      </div>
+    </div>
+  <div class="right-column">
+    <!-- Griglia delle band -->
+    <div class="items" style="text-align: center;">
+      <div class="item-grid">
+        <div class="item" data-category="punk" data-price="Gruppo" data-date=>
+          <img src="immag/skiantos.jpg" alt="skiantos">
+            <button class="button">
+              <a href="Skruigner.html">SKIANTOS</a>
+            </button>
+        </div>
+        <div class="item" data-category="punk" data-price="Gruppo" data-date="">
+          <img src="immag/moravagine.jpg" alt="moravagine">
+            <button class="button">
+              <a href=".html">MORAVAGINE</a>
+            </button>
+        </div>
+        <div class="item" data-category="hardcore" data-price="Gruppo" data-date="">
+          <img src="immag/wretched.jpg" alt="wretched">
+            <button class="button">
+              <a href=".html">WRETCHED</a>
+            </button>
+        </div>
+        <div class="item" data-category="punk" data-price="Gruppo" data-date="">
+          <img src="immag/Clito.jpg" alt="clito">
+            <button class="button">
+              <a href=".html">CLITO</a>
+            </button>
+        </div>
+        <div class="item" data-category="hardcore" data-price="Gruppo" data-date="">
+          <img src="immag/nabat.jpg" alt="nabat">
+            <button class="button">
+              <a href=".html">NABAT</a>
+            </button>
+        </div>
+        <div class="item" data-category="hardcore" data-price="Gruppo" data-date="">
+          <img src="immag/indigesti.jpg" alt="indigesti">
+            <button class="button">
+              <a href=".html">INDIGESTI</a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href="grazieditutto.html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=""></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="album" data-date="2011-01-18">
+          <img src="imgskr/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="album" data-date="2003-01-01">
+          <img src="imgskr/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="album" data-date="2001-11-01">
+          <img src="imgskr/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+        <div class="item" data-category="" data-price="Gruppo" data-date="">
+          <img src="immag/.jpg" alt="">
+            <button class="button">
+              <a href=".html"></a>
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination" style="width: 100%; margin: auto">
+      <a href="Catalogo.html">« Precedente</a>
+      <a href="Catalogo.html">1</a>
+      <a href="Catalogo2.html" class="active">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">Successivo»</a>
+    </div>
+    </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col" style="text-align: center; margin-top: 20px; font-size: 30px;">
+        <ul>
+          <li><a href="">Info</a></li>
+          <li><a href="webprojectplan.html">Web Project Plan</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="col" style="text-align: center;  margin-top: 80px;">
+        <p>Questo è un progetto senza scopo di lucro, tutti i diritti sui contenuti e le immagini presenti su questo sito sono di proprietà dei rispettivi autori.</p>
+      </div>
+      <div class="col" style="text-align: center">
+        <h2>Seguici:</h2>
+        <ul class="col-links">
+          <li><a href="https://www.facebook.com" target="_blank"><img src="immag/facebook.png" alt="Facebook"></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><img src="immag/instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><img src="immag/x.png" alt="Twitter"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script>
+        // Funzione per filtrare gli articoli
+        function filterItems() {
+            const selectedCategories = Array.from(document.querySelectorAll('.filter-category:checked'))
+                .map(checkbox => checkbox.value);
+            const selectedPrices = Array.from(document.querySelectorAll('.filter-price:checked'))
+                .map(checkbox => checkbox.value);
+
+            document.querySelectorAll('.item').forEach(item => {
+                const category = item.getAttribute('data-category');
+                const price = item.getAttribute('data-price');
+
+                const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+                const matchesPrice = selectedPrices.length === 0 || selectedPrices.includes(price);
+
+                if (matchesCategory && matchesPrice) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Funzione per ordinare gli articoli
+        function sortItems() {
+            const sortValue = document.getElementById('sort').value;
+            const itemsContainer = document.querySelector('.items');
+            const items = Array.from(itemsContainer.children);
+
+            items.sort((a, b) => {
+                const textA = a.textContent.trim().toLowerCase();
+                const textB = b.textContent.trim().toLowerCase();
+
+                if (sortValue === 'asc') {
+                    return textA.localeCompare(textB);
+                } else {
+                    return textB.localeCompare(textA);
+                }
+            });
+
+            items.forEach(item => itemsContainer.appendChild(item));
+        }
+
+        // Funzione per filtrare in base alla data (periodo)
+  function filterByDate() {
+      const startDate = document.getElementById('start-date').value;
+      const endDate = document.getElementById('end-date').value;
+
+      document.querySelectorAll('.item').forEach(item => {
+          const itemDate = item.getAttribute('data-date');
+
+          // Controlla se la data è dentro l'intervallo
+          const isWithinRange =
+              (!startDate || itemDate >= startDate) &&
+              (!endDate || itemDate <= endDate);
+
+          if (isWithinRange) {
+              item.classList.remove('hidden');
+          } else {
+              item.classList.add('hidden');
+          }
+      });
+  }
+
+  // Event listener per il pulsante "Applica filtro per data"
+  document.getElementById('filter-date').addEventListener('click', filterByDate);
+
+
+        // Event listeners
+        document.querySelectorAll('.filter-category, .filter-price').forEach(filter => {
+            filter.addEventListener('change', filterItems);
+        });
+
+        document.getElementById('sort').addEventListener('change', sortItems);
+        document.getElementById('filter-date').addEventListener('click', filterByDate);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

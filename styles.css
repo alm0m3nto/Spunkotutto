@@ -1,0 +1,63 @@
+body {
+  background-color: black; /* Colore di sfondo per la pagina */
+  margin: 0; /* Rimuove il margine predefinito */
+  color: white;
+}
+
+/* Imposta il colore di sfondo per la navbar separatamente */
+.navbar {
+  background-color: #ffffff; /* Colore di sfondo della navbar */
+  position: fixed; /* Rende la navbar fissa in cima alla pagina */
+  top: 0;          /* Posiziona la navbar in cima */
+  left: 0;         /* Allinea la navbar al lato sinistro */
+  width: 100%;     /* Fa sì che la navbar occupi tutta la larghezza */
+  z-index: 1000;   /* Assicura che la navbar rimanga sopra gli altri contenuti */
+}
+/* Effetto hover per i box delle voci */
+.navbar-nav .nav-item .nav-link {
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; /* Transizione morbida */
+}
+
+/* Cambio colore al passaggio del mouse */
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: black; /* Colore di sfondo nero */
+  color: white; /* Colore del testo bianco */
+}
+/* Per il dropdown */
+/*.navbar-nav .nav-item.dropdown .nav-link {
+  padding-right: 20px;
+}*/
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  background-color: #f8f9fa; /* Colore di sfondo del menu a discesa */
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: black; /* Colore di sfondo nero per gli item nel dropdown */
+  color: white; /* Colore bianco per il testo nel dropdown */
+}
+
+
+/* Responsive: Stile per dispositivi mobili */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 10px; /* Riduce la spaziatura interna */
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center; /* Centra i link */
+        padding: 10px; /* Spaziatura uniforme */
+        font-size: 14px; /* Riduce la dimensione del testo */
+    }
+
+.carousel-inner {
+  max-width: 500px;
+  margin: 0 auto; /* Centra il carousel */
+}
+.carousel-inner img {
+  width: 100%; /* Adatta l'immagine al contenitore */
+  height: auto; /* Mantiene il rapporto di aspetto */
+}
+#linkableCarousel {
+  margin-top: 500px; /* Distanza desiderata */

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spunkotutto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <META NAME="DC.Title" CONTENT="Spunkotutto"/>
+    <META NAME="DC.Creator" CONTENT="Alessio Ursini"/>
+    <META NAME="DC.Subject" CONTENT="Musica Punk in Italia"/>
+    <META NAME="DC.Description" CONTENT="Raccolta di diverse band Punk italiane, con l'obiettivo di far incuriosire e informare i meno avvezzi al genere affinchè possano conoscere le band che hanno fatto la storia del genere nel nostro paese."/>
+    <META NAME="DC.Publisher" CONTENT="Github pages"/>
+    <META NAME="DC.Date" CONTENT="02-01-2025"/>
+    <META NAME="DC.Type" CONTENT="Catalogo"/>
+    <META NAME="DC.Format" CONTENT="Sito Web"/>
+    <META NAME="DC.Language" CONTENT="Italiano"/>
+    <META NAME="DC.Rights" CONTENT="Diritti di proprietà dei rispettivi autori"/>
+    <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    footer {
+      background-color: white;
+      color: black;
+    }
+    ul {
+      list-style: none;
+    }
+    .col-links img{
+      width: 10%;
+      padding-bottom: 20px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <!--NAVBAR CON DROPDOWN-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="Logo/spunkotutto9.png" alt="Logo" style="height: 40px;"> <!-- Sostituisci il percorso con il tuo logo -->
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SOTTOGENERI</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="punkrock.html">Punk rock</a></li>
+                  <li><a class="dropdown-item" href="postpunk.html">Post-punk</a></li>
+                  <li><a class="dropdown-item" href="hardcorepunk.html">Hardcore punk</a></li>
+                  <li><a class="dropdown-item" href="skapunk.html">Ska punk</a></li>
+                  <li><a class="dropdown-item" href="poppunk.html">Pop punk</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Catalogo.html">CATALOGO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lineadeltempo.html">LINEA DEL TEMPO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="luoghi.html">LUOGHI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">ACCEDI</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div style="margin-top: 65px;"> <!-- Aggiungi margine per evitare che il contenuto vada sotto la navbar --></div>
+      <div class="container" style="margin-top: 100px;">
+        <h1>Web Project Plan</h1>
+        <div class="Indice">
+          <ul>
+            <li><a href="#idea">1. Idea</a></li>
+            <li><a href="#breaf">2. Breaf</a></li>
+              <ul>
+                <li><a href="#finalità">2.1 Finalità</a></li>
+                <li><a href="#pubblico">2.2 Pubblico</a></li>
+                <li><a href="#accesso">2.3 Accesso</a></li>
+                <li><a href="#contenutidati">2.4 Contenuti e dati</a></li>
+              </ul>
+            <li><a href="#benchmark">3. Benchmark</a></li>
+              <ul>
+                <li><a href="#analisimercato">3.1 Analisi di mercato</a></li>
+                <li><a href="#descrizioneconcorrenti">3.2 Descrizione dei concorrenti</a></li>
+              </ul>
+            <li><a href="#struttura">4. Struttura</a></li>
+              <ul>
+                <li><a href="#mappaconcettuale">4.1 Mappa concettuale</a></li>
+                <li><a href="#mappadipendenze">4.2 Mappa delle dipendenze</a></li>
+                <li><a href="#categoriedescrittive">4.3 Categorie descrittive</a></li>
+              </ul>
+            <li><a href="#layout">5. Layout</a></li>
+              <ul>
+                <li><a href="#wireframeindex">5.1 Wireframe index</a></li>
+                <li><a href="#wireframesottogenere">5.2 Wireframe sottogenere</a></li>
+                <li><a href="#wireframecatalogo">5.3 Wireframe catalogo</a></li>
+                <li><a href="#wireframegruppo">5.4 Wireframe pagina del gruppo</a></li>
+                <li><a href="#wireframealbum">5.5 Wireframe pagina dell'album</a></li>
+                <li><a href="#wireframetempo">5.6 Wireframe linea del tempo</a></li>
+                <li><a href="#wireframeluoghi">5.7 Wireframe luoghi</a></li>
+                <li><a href="#wireframelogin">5.8 Wireframe login/registrazione</a></li>
+                <li><a href="#wireframepersonale">5.9 Wireframe pagina personale</a></li>
+              </ul>
+            <li><a href="#usabilità">6. Usabilità</a></li>
+              <ul>
+                <li><a href="#nuarchitettura">6.1 Norme di usabilità per l'arcchitettura</a></li>
+                <li><a href="#nuaspetto">6.2 Norme di usabilità per l'aspetto e la tipografia</a></li>
+                <li><a href="#nucolori">6.3 Norme di usabilità per colori, icone e font</a></li>
+              </ul>
+            <li><a href="#servizi">7. Servizi</a></li>
+              <ul>
+                <li><a href="#browsingaggiuntivi">7.1 Sistemi di browsing aggiuntivi</a></li>
+                <li><a href="#utilities">7.2 Utilities e tools per l'interazione</a></li>
+              </ul>
+            <li><a href="#bibliografia">8. Bibliografia</a></li>
+              <ul>
+                <li><a href="#testimmagini">8.1 Siti utilizzati per la realizzazione di testi e immagini</a></li>
+                <li><a href="#strumentimultimediali">8.2 Siti utilizzati per la realizzazione di strumenti e contenuti multimediali</a></li>
+                <li><a href="#codice">8.3 Codice</a></li>
+              </ul>
+          </ul>
+        </div>
+        <h2 id="idea">1. Idea</h2>
+        <p>Spunkotutto ha l'obiettivo di collezionare album e gruppi in modo semplice, per far avvicinare i meno avvezzi al genere, dando servizi aggiuntivi per un'informazione approfondita riguardo luoghi e storia del genere, come mappe e linee del tempo. Inoltre nell'index del sito è fornita una mappa sui legami dei sottogeneri, per comprendere l'evoluzione del Punk nel mondo prima di avventurarsi in quello italiano. Infine il sito è progettato per device come PC, per garantire una navigazione comoda e approfondita in modo accessibile agli inesperti.</p>
+        <h2 id="breaf">2. Brief</h2>
+        <h3 id="">2.1 Finalità</h3>
+        <p>Il progetto si occupa di raccogliere e collezionare album e gruppi delle band Punk italiane più importanti e non, dando la possibilità di approfondire su storia, luoghi e più nello specifico storia dei sottogeneri, al fine di dare un'informazione valida e completa all'utente.</p>
+        <h3 id="pubblico">2.2 Pubblico</h3>
+        <p>Spunkotutto è progettato principalmente per coloro che sono intenzionati a conoscere il genere, la struttura del sito infatti risulta semplice proprio per poter essere accessibile a tutti coloro che vogliono avvicinarsi al genere. Tuttavia chiunque, anche i più esperti, possono utilizzare il sito per le loro ricerche musicali su storia ed evoluzione del genere.</p>
+        <h3 id="accesso">2.3 Accesso</h3>
+        <p>Il sito è muinito di testi e immagini per comprendere al meglio il contenuto, inoltre sono presenti diversi iframe per poter avere anche un impatto audiovisivo durante la ricerca sul sito, il sito è multipiattaforma grazie alle proprietà responsive di bootstrap, ma il device principale rimane il PC.</p>
+        <h3 id="contenutidati">2.4 Contenuti e dati</h3>
+        <p>Le immagini sono state prese da google immagini e dalle pagine di Wikipedia, i contenuti originali sono l'immagine del logo del sito e l'immagine nell'header dell'index.</p>
+        <h2 id="benchmark">3. Benchmark</h2>
+        <h3 id="analisimercato">3.1 Analisi di mercato</h3>
+        <p>Esistono molti siti che offrono servizi di raccolta e ricerca sulla musica Punk, ma molti di essi è generica (non solo riguardo il punk, bensì anche molti altri generi), non esistono invece siti di raccolta e ricerca interamente incentrati sul Punk italiano, che offrano un servizio che riguardi l’evoluzione di esso e la raccolta di items. Tuttavia nonostante esistano articoli singoli riguardo precisi anedoti della storia e dello sviluppo di questo genere in Italia, non ve ne sono alcuni che offrano informazioni storiche correlate ad un catalogo di gruppi e album.</p>
+        <p>Un sito attinente all’argomento è sicuramente <a href="https://www.last.fm/it/tag/italian+punk/artists">Last.fm</a> (artisti più ascoltati con tug italian punk) che offre un buon servizio sulla ricerca dei migliori album, gruppi e canzoni del genere anche se poco dettagliato vista la vastità di argomenti trattati, oltre che di generi.</p>
+        <p>Un altro sito è <a href="https://www.discogs.com/">Discogs</a> sempre una raccolta molto vasta sulla musica in generale che presenta anche una sezione punk, inoltre il Punk italiano non è neanche reperibile come genere (astratto dal Punk britannico o statunitense per esempio) con la ricerca avanzata, eccezion fatta se si cerca direttamente l’artista o l’album.</p>
+        <p>Infine uno dei siti che presenta il servizio più completo e affine all’idea del mio progetto è <a href="https://bandcamp.com/discover/punk">Bandcamp</a>, il quale però appare disordinato e difficile da utilizzare per qualcuno che si vuole avvicinare per la prima volta al genere.</p>
+        <h3 id="descrizioneconcorrenti">3.2 Descrizione dei concorrenti</h3>
+        <p>Ogni sito ritrovato è stato importante per la creazione di Spunkotutto, in quanto hanno fornito importanti spunti da cui prendere esempio in particolare i seguenti:
+          <li><a href="https://www.last.fm/it/tag/italian+punk/artists">Last.fm</a></li>
+          <li><a href="https://www.discogs.com/">Discogs</a></li>
+          <li><a href="https://bandcamp.com/discover/punk">Bandcamp</a></li></p>
+        <p>Il primo, <a href="https://www.last.fm/it/tag/italian+punk/artists">Last.fm</a>, presenta una nota molto interessante cioè la pagina del gruppo che mi ha ispirato nella creazione delle pagine di album e band, inoltre fornisce info molto dettagliate sul gruppo trattato come storia, discografia e prossimi eventi, dando la possibilità di iscriversi per poter modificare le wiki e poter commentare gli articoli.</p>
+        <p>Il secondo, <a href="https://www.discogs.com/">Discogs</a>, a primo impatto è sicuramente più datato ma fornisce servizi diversi, il primo che spicca è lo shop, infatti è possibile acquistare sia sul sito che su siti linkati merch, album, dischi poster e tanto altro delle band presenti sul sito. Discogs tuttavia come già detto precedentemente è molto vasto in quanto presenta diversi ambiti e generi musicali, è dunque sicuramente una validissima realtà per la divulgazione e l'informazione musicale, ma forse troppo vasta per poter attirare i meno esperti.</p>
+        <p>Il terzo, <a href="https://bandcamp.com/discover/punk">Bandcamp</a>, come già detto è forse il più disordinato e disorientante, anche se le proposte musicali sono avanzatissime in quanto consiglia diversi gruppi emergenti, catalogandoli con una serie di tag che tuttavia mi hanno provocato una confusione nell'orientarmi sul sito. Questo punto in particolare mi ha dato spunto su come impostare i filtri del catalogo, mettendo semplici impostazioni, ma che consentano di riuscirsi ad orientare in modo accessibile sul catalogo.</p>
+        <h2 id="struttura">4. Struttura</h2>
+        <h3 id="mappaconcettuale">4.1 Mappa concettuale</h3>
+        <img src="immag/mappaconc.png" class="img-fluid" alt="Mappa Concettuale">
+        <p>In questa mappa concettuale sono riportati gli elementi costitutivi del genere in Italia, infatti il punk italiano è direttamente discendente di quello britannico, ogni sottogenere si è sviluppato in città diverse e le "cause di nascita" del genere sono contraddistinte da motivazioni che riguardano sfere sociali intere. Vengono approfonditi appunto i motivi di nascita che sono tra l'altro legati agli ambienti e alle subculture, infine è importante riconoscere il legame tra il periodo storico (gli anni di piombo) e i contesti sociali, per comprendere al meglio l'origine del genere.</p>
+        <h3 id="mappadipendenze">4.2 Mappa delle dipendenze</h3>
+        <img src="immag/mappadipend.png" class="img-fluid" alt="Mappa Delle Dipendenze">
+        <p>In questa mappa delle dipendenze è riportata in cima la homepage, di seguito vi è la pagina del sottogenere, dalla navbar è possibile accedervi tramite un dropdown, poi in seguito si può trovare il catalogo che conduce direttamente alla pagina della band, che a sua volta conduce alla pagina dell'album. Tuttavia in queste due pagine è possibile accedervici non solo dal catalogo, bensì anche dalla homepage, dalla pagina del sottogenere e dalla linea del tempo dove vi sono le card.
+        </p>
+        <p>In seguito troviamo la linea del tempo dove è possibile vedere in modo semplice e veloce, l'evoluzione e la storia del genere in Italia, proseguendo è presente la pagina dei luoghi, dove c'è una mappa realizzata con Storymap JS, che da la possibilità di visitare con le mappe i luoghi più importanti affiancati da immagini e didascalie. Infine l'ultima è la pagina del login o della registrazione che porta poi, una volta effettuato l'accesso, nella pagina personale dove è possibile salvare album e band.</p>
+        <h3 id="categoriedescrittive">4.3 Categorie descrittive</h3>
+        <p>Le categorie descrittive utilizzate sono le seguenti (esempio preso dall'album <a href="grazieditutto.html">Grazie di Tutto</a> degli Skruigners):</p>
+        <ul>
+          <li>Titolo: Grazie di tutto</li>
+          <li>Artista: Skruigners</li>
+          <li>Sottogenere: Hardcore punk</li>
+          <li>Etichetta discografica: Tube records</li>
+          <li>Data di uscita: Novembre 1999</li>
+          <li>Lingua: Italiano</li>
+          <li>Numero di canzoni: 16</li>
+        </ul>
+        <h2 id="layout">5. Layout</h2>
+        <h3 id="wireframeindex">5.1 Wireframe Index</h3>
+        <img src="wireframe/index.png" class="img-fluid" alt="Index">
+        <p>Questo è il wireframe della homepage. Nell'header troviamo la nav, che è uguale in tutte le pagine e subito sotto un'immagine per accogliere sul sito, subito dopo c'è un breve abstract che spiega di cosa si tratta nel sito.</p>
+        <p>Di seguito si trova una mappa delle relazioni prodotta con Flourish, per spiegare l'evoluzione del Punk a livello mondiale prima di approfondire quello nazionale, successivamente troviamo un carousel con i live più iconici e una griglia di card che funge da introduzione al catalogo. Infine troviamo il footer che anche questo è uguale in tutte le pagine.</p>
+        <h3 id="wireframesottogenere">5.2 Wireframe sottogenere</h3>
+        <img src="wireframe/sottogenere.png" class="img-fluid" alt="sottogenere">
+        <p>Nella pagina del sottogenere troviamo come nell'header precedente la navbar e un'immagine introduttiva con al di sotto di essa le breadcrumbs, poi nel corpo vi è un testo dove è riportata la storia del sottogenere in Italia, di seguito troviamo una griglia di card dove vi sono elencati i gruppi più importanti del sottogenere con la possibilità di accedervi alla pagina del gruppo ed infine il footer.</p>
+        <h3 id="wireframecatalogo">5.3 Wireframe catalogo</h3>
+        <img src="wireframe/catalogo.png" class="img-fluid" alt="catalogo">
+        <p>Nel wireframe del catalogo vi sono due sezioni della pagina, la prima a sinistra dove sono presenti dei filtri che consentono di selezionare e filtrare gli items della parte destra della pagina. Questi permettono di filtrare per sottogenere, per tipologia dell'item(Gruppo o Album), in ordine alfabetico cresente o decrescente e per periodi di tempo, selezionando una data iniziale e una finale.</p>
+        <p>In fondo alla sezione degli items del catalogo è presente un pagination con il quale è possibile andare nelle altre pagine del catalogo.</p>
+        <h3 id="wireframegruppo">5.4 Wireframe pagina del gruppo</h3>
+        <img src="wireframe/gruppo.png" class="img-fluid" alt="pagina del gruppo">
+        <p>La pagina del gruppo presenta nell'header un'immagine del logo della band, sotto di essa vi sono le breadcrumbs, di seguito c'è una sezione dedicata alla storia del gruppo, con la presenza anche di immagini.
+        Proseguendo è possibile trovare il button che consente di aggiungere il gruppo alla raccolta personale e sotto di esso è presente un iframe di un player Spotify della band in questione, successivamente troviamo una tab con tante sezioni quante i componenti della band dove appunto è possibile vedere delle bio su di essi.</p>
+        <p>Infine prima del footer è presente una piccola griglia di card, dove sono riportati gli album della band, nei quali vi sono dei button che conducono alla pagina dell'album.</p>
+        <h3 id="wireframealbum">5.5 Wireframe pagina dell'album</h3>
+        <img src="wireframe/album.png" class="img-fluid" alt="pagina dell'album">
+        <p>Questa pagina è divisa in 4 container, i primi due in alto separti dagli altri in due in basso tramite un paragrafo.</p>
+        <p>Nello specifico, in seguito a navbar e breadcrumbs vi è una sezione in alto a sinistra, questa presenta titolo e immagine del paragrafo, alla sua destra c'è un'altra sezione dove vi sono le categorie descrittive dell'album e sotto di questi un button per aggiungere l'album alla raccolta personale. Al centro della pagina come già detto è presente un paragrafo dove sono riportate informazioni e storia dell'album.</p>
+        <p>Nelle ultime due sezioni in basso alla pagina, infine troviamo due iframe, uno di youtube con il live più ascoltato dell'almbum e uno di spotify con la pagina dedicata appunto all'album.</p>
+        <h3 id="wireframetempo">5.6 Wireframe linea del tempo</h3>
+        <img src="wireframe/lineadeltempo.png" class="img-fluid" alt="linea del tempo">
+        <p>Questa è una pagina molto semplice, dopo i classici navbar, breadcrumbs e footer, troviamo nel body della pagina la linea del tempo che potrebbe costituire un sistema di navigazione secondario, oltre ad essere efficace in una informazione basilare ed essenziale riguardo il genere e la sua storia.</p>
+        <h3 id="wireframeluoghi">5.7 Wireframe luoghi</h3>
+        <img src="wireframe/luoghi.png" class="img-fluid" alt="luoghi">
+        <p>Come la precedente, anche questa pagina è abbastanza semplice, infatti oltre le classiche componenti presenti in ogni pagina troviamo un iframe ottenuto dal sito "StoryMap JS" che è appunto una mappa interattiva, scorrendo infatti appariranno affianco alla mappa didascalie ed immagini sui luoghi che hanno fatto la storia del genere.</p>
+        <h3 id="wireframelogin">5.8 Wireframe login/registrazione</h3>
+        <img src="wireframe/loghin.png" class="img-fluid" alt="login/registrazione">
+        <p>Questa pagina presenta due sezioni oltre le classiche, una per l'accesso e una per la registrazione, vi è inoltre la possibilità di spuntare il "ricordami" in modo da poter accedere direttamente le prossime volte.</p>
+        <h3 id="wireframepersonale">5.9 Wireframe pagina personale</h3>
+        <img src="wireframe/paginapersonale.png" class="img-fluid" alt="personale">
+        <p>La pagina della raccolta personale è la parte del sito dove vengono inseriti gli items salvati, oggetti o album, dove è possibile modificare il proprio avatar e le proprie credenziali.</p>
+        <h2 id="usabilità">6. Usabilità</h2>
+        <h3 id="nuarchitettura">6.1 Norme di usabilità per l'architettura</h3>
+        <p>Per l'architettura del sito ho adottato una navbar che mantenga la stessa posizione anche durante il movimento della pagina, permettendo dunque di poter usare la navigazione primaria in qualsiasi posizione, questo però non è possibile nel catalogo, per garantire una visibilità completa dello schermo durante la visualizzazione della raccolta.</p>
+        <p>Altra componente della navigazione sono le breadcrumbs o briciole di pane, presenti in tutte le pagine esclusa la homepage, queste ho deciso di posizionarle sempre sotto la navbar o se presente sotto un'immagine come separazione dal resto del corpo, inoltre nelle pagine dedicate agli item (sottogeneri, band e album) è sempre presente almeno un'immagine nell'header o nel corpo, oltre che delle card che rimandano a gruppi o album.</p>
+        <p>Infine nella parte inferiore del body di ogni pagina è presente un footer, diviso in tre sezioni racchiuse in un container, la prima presenta i link a Info, Web Project Plan e Login, al centro vi sono i crediti e i copyright del sito e a destra i social links.</p>
+        <h3 id="nuaspetto">6.2 Norme di usabilità per l'aspetto e la tipografia</h3>
+        <p>Il sito presenta in ogni pagina lo stesso font, per una semplicità della lettura, inoltre lo sfondo nero e il colore del font bianco trasmettono sicuramente una sensazione di rilassamento per gli occhi, oltre ad essere il colore scuro attinente col tema. Infine per quanto riguarda i feedback dei link ho scelto di lasciare il semplice scurirsi del link stesso al passaggio del mouse, mentre per i buttons presi da bootstrap ho lasciato le proprietà già assegnate.</p>
+        <h3 id="nucolori">6.3 Norme di usabilità per colori, icone e font</h3>
+        <p>I colori scelti sono principalmente nero, bianco e per i button il blu, ad eccezione del catalogo, che per differenziarli dai buttons delle altre pagine (in quanto sono buttons di griglie di card, che non costituiscono dunque un catalogo) ho scelto il colore verde, in sintonia anche con il verde dei buttons attivi del pagination. Infine le poche icone inserite sono state prese da bootstrap o w3school.</p>
+        <h2 id="servizi">7. Servizi</h2>
+        <h3 id="browsingaggiuntivi">7.1 Sistemi di browsing aggiuntivi</h3>
+        <p>Oltre a navbar e breadcrumbs, ho realizzato nel catalogo dei filtri, attualmente non interamente utilizzabili, ma che comunque riescono a fornire un modo per orientarsi adeguato alla quantità di items di una singola pagina. Infatti è possibile filtrare per tipologia dell'item, ad esempio se è un album o un gruppo, oppure per sottogenere, oltre che per lasso di tempo impostando una data di inizio ed una di fine.</p>
+        <p>Altri sistemi di browsing sono il pagination, presente appunto nel catalogo, la linea del tempo, dalla quale è possibile orientarsi in modo efficace per informarsi in modo ordinato cronologicamente, ed infine la mappa realizzata tramite StoryMap JS, grazie alla quale è possibile scoprire i luoghi più importanti della storia del genere a livello nazionale.</p>
+        <h3 id="utilities">7.2 Utilities e tools per l'interazione</h3>
+        <p>Per una migliore interazione ho inserito diversi tools e utilities di seguito elencate:</p>
+        <p>
+            <li><strong>Dropdown:</strong> presente sia nella navbar alla sezione "sottogeneri", che nella box dei filtri per scegliere il sottogenere da filtrare. </li>
+            <li><strong>Card:</strong> per elencare le bando o gli album in modo veloce, comodo e aromonioso a livello visivo.</li>
+            <li><strong>Buttons:</strong> presente sia nelle card che in altri contesti come l'add button per inserire la pagina corrente nella raccolta.</li>
+            <li><strong>Tabs:</strong> per realizzare una minibio sui membri delle band, che possa anche essere bella visivamente.</li>
+            <li><strong>Carousel:</strong> per visualizzare nella homepage, i live più iconici.</li>
+            <li><strong>Pagination:</strong> da la possibilità di rendere il catalogo molto più ampio.</li>
+            <li><strong>Navbar non dinamica:</strong> tranne nel catalogo, in ogni pagina la navbar rimarrà nella parte superiore del sito, seguendo il movimento della pagina.</li>
+        </p>
+        <h2 id="bibliografia">8. Bibliografia</h2>
+        <h3 id="testimmagini">8.1 Siti utilizzati per la realizzazione di testi e immagini</h3>
+          <li>Testi prodotti da me con studio delle informazioni da Wikipedia: <a href="https://www.wikipedia.org/">https://www.wikipedia.org/</a></li>
+          <li>Immagini prese da Google immagini e da Wikipedia</li>
+        <h3 id="strumentimultimediali">8.2 Siti utilizzati per la realizzazione di strumenti e contenuti multimediali</h3>
+          <li>Realizzazione dei wireframes: <a href="https://balsamiq.com/(">https://balsamiq.com/(</a></li>
+          <li>Realizzazione della mappa delle relazioni tra sottogenri: <a href="https://flourish.studio/visualisations/network-charts/">https://flourish.studio/visualisations/network-charts/</a></li>
+          <li>Utilizzo di <a href="https://www.youtube.com/">Yuoutube</a> e <a href="https://open.spotify.com/intl-it">Spotify</a> per la creazione di iframe players</li>
+          <li>Mappa interattiva realizzata con <a href="https://storymap.knightlab.com/">StoryMapJS di Knightlab</a></li>
+          <li>Loghi: <a href="https://www.brandcrowd.com/maker/tag/punk-rock">https://www.brandcrowd.com/maker/tag/punk-rock</a></li>
+        <h3 id="codice">8.3 Codice</h3>
+          <li>Codici presi dai siti di Bootstrap e w3schools.</li>
+      </div>
+
+
+      <div style="margin-bottom: 50px;"></div>
+
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col" style="text-align: center; margin-top: 20px; font-size: 30px;">
+              <ul>
+                <li><a href="">Info</a></li>
+                <li><a href="webprojectplan.html">Web Project Plan</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </div>
+            <div class="col" style="text-align: center;  margin-top: 80px;">
+              <p>Questo è un progetto senza scopo di lucro, tutti i diritti sui contenuti e le immagini presenti su questo sito sono di proprietà dei rispettivi autori.</p>
+            </div>
+            <div class="col" style="text-align: center">
+              <h2>Seguici:</h2>
+              <ul class="col-links">
+                <li><a href="https://www.facebook.com" target="_blank"><img src="immag/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><img src="immag/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><img src="immag/x.png" alt="Twitter"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
